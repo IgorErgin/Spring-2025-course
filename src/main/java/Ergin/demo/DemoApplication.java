@@ -1,13 +1,18 @@
 package Ergin.demo;
 
-import org.springframework.boot.SpringApplication;
+
+import Ergin.demo.service.MessageProcessor;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.boot.SpringApplication;
 
 @SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
+		MessageProcessor processor = context.getBean(MessageProcessor.class);
+		processor.processMessages();
+		context.close();
 	}
-
 }
