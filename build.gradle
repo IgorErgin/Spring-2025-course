@@ -1,35 +1,31 @@
 plugins {
-	id 'java'           // Подключает базовую поддержку Java
-	id 'application'    // Подключает плагин application для задачи run
-	id 'org.springframework.boot' version '3.2.4' // Актуальная версия на март 2025
-	id 'io.spring.dependency-management' version '1.1.4'
+	id 'java'
+	id 'org.springframework.boot' version '3.4.3'
+	id 'io.spring.dependency-management' version '1.1.7'
 }
 
-group 'Ergin'
-version '1.0-SNAPSHOT'
+group = 'Ergin'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	// Spring Boot Starter для веб-приложений
+	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-
-	// Lombok
-	compileOnly 'org.projectlombok:lombok:1.18.32'
-	annotationProcessor 'org.projectlombok:lombok:1.18.32'
-
-	// Логирование
-	implementation 'org.springframework.boot:spring-boot-starter-logging'
-
-	// Добавляем spring-test для MockHttpServletRequest
-	implementation 'org.springframework.boot:spring-boot-starter-test'
-
-	// Тестовые зависимости (опционально)
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	compileOnly 'org.projectlombok:lombok:1.18.30'
+	annotationProcessor 'org.projectlombok:lombok:1.18.32'
 }
 
-application {
-	mainClass = 'Ergin.demo.MainTest'  // Указывает главный класс
+tasks.named('test') {
+	useJUnitPlatform()
 }
