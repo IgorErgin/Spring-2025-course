@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Request Headers</title>
+</head>
+<body>
+<h1>Request Headers</h1>
+<ul>
+    <li th:each="header : ${headers}" th:text="${header.key + ': ' + header.value}"></li>
+</ul>
+</body>
+</html>
