@@ -1,0 +1,11 @@
+spring:
+  application:
+    name:learn-project-test
+
+users:
+  - test-user-1
+  - test-user-2
+  - test-user-3
+
+EXAMPLE_TEST:
+  ${test_value:default}
