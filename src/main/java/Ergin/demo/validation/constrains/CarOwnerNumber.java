@@ -10,8 +10,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Min(value = 0, message = "Car owner number should be from 0 to 5")
-@Max(value = 5, message = "Car owner number should be from 0 to 5")
+@Min(value = 0, message = "{validation.error.car_owner_number}")
+@Max(value = 5, message = "{validation.error.car_owner_number}")
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = {})

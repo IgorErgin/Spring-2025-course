@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = CarNameValidator.class)
 @Documented
 public @interface CarNameConstraint {
-    String message() default "The name must contain valid characters";
+    String message() default "{validation.errors.car_name}";
 
     Class<?>[] groups() default {};
 

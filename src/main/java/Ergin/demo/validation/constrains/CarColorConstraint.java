@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = CarColorValidator.class)
 @Documented
 public @interface CarColorConstraint {
-    String message() default "Car color should be \"black, \"white\" or red";
+    String message() default "{validation.errors.car_color}";
 
     Class<?>[] groups() default {};
 
