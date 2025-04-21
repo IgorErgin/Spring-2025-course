@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name:learn-project
+  profiles:
+    active: test
+
+users:
+  - default-user-1
+  - default-user-2
+  - default-user-3
+
+EXAMPLE_TEST:
+  ${test_value:default}

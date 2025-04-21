@@ -1,0 +1,11 @@
+spring:
+  application:
+    name:learn-project-prod
+
+users:
+  - prod-user-1
+  - prod-user-2
+  - prod-user-3
+
+EXAMPLE_TEST:
+  ${test_value:default}
