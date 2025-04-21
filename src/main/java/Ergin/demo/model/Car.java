@@ -15,7 +15,7 @@ public class Car {
     private final long id;
 
     @CarNameConstraint
-    private final String Mark;
+    private final String mark;
 
     @Year
     private final int year;
