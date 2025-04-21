@@ -1,5 +1,6 @@
 package Ergin.demo;
 
+import Ergin.demo.model.Car;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
