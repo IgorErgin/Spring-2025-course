@@ -1,4 +1,4 @@
-package Ergin.demo;
+package Ergin.demo.broker_consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
